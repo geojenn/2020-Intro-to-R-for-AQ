@@ -1,0 +1,68 @@
+---
+title: "Homework 1"
+author: "Jenny St. Clair"
+output: html_document
+---
+# Watch this for a tour of R Markdown: https://www.youtube.com/watch?v=DNS7i2m4sB0 
+
+## Run this code chunk first.
+```{r Packages, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(lubridate)
+library(plotly)
+```
+
+## Read in and prep data. 
+Data source: https://www.airnowtech.org/ 
+```{r message=FALSE, warning=FALSE}
+data <- read.csv("MD_o3_1029_tidy.csv")
+
+data <- data %>% select (-c(X,time))
+
+data$Site.AQS.split <- as.character(data$Site.AQS)
+data<- data %>% separate(Site.AQS.split, c("State.FIPS", "County.AQS"), 2)
+data <- data %>% separate(County.AQS, c("County.FIPS", "Site"), 3)
+
+data$Site.AQS <- as.factor(data$Site.AQS)
+data$State.FIPS <- as.factor(data$State.FIPS)
+data$County.FIPS <- as.factor(data$County.FIPS)
+data$Method <- as.factor(data$Method)
+
+data <- data %>% filter(State.FIPS == "24")
+
+
+data$date <- data$date %>% 
+  as_datetime() 
+
+str(data)
+```
+
+# Homework 1
+### 1. This script works on the Iris dataset that comes with R. You should be able to run it as is just fine.
+### 2. Change it to use the same data we used here. The data prep is included above. 
+### 3. Let the histogram show the frequency of different ozone values in the dataset (ozone on the x-axis, no y-axis variable necessary). 
+### 4. Change the number of bins (in geom_histogram()) to 20, then try 40.
+### 5. Use the labs() function to add a title, a subtitle with your name, and rename the x-axis "Ozone."
+### 6. I will email the solution to this homework next week, though we will not have time to cover it in Webinar 2.
+
+# For fun: 
+
+### 1. Try applying different themes to your plot.
+https://www.datanovia.com/en/blog/ggplot-themes-gallery/  
+
+### 2. Use the function plotly::ggplotly() to make the graphic interactive.
+https://plot.ly/ggplot2/  
+
+### 3. See what happens if you put <fill = Site.AQS> in the aes() function inside geom_histogram().
+
+
+Remember, when you run into errors and weird results, don't spend too much time thinking about it. If you can't think of a solution after a couple minutes, google it! StackExchange/StackOverflow is your friend too. If the internet isn't helping, shoot me an email or give me a call.
+
+https://ggplot2.tidyverse.org/reference/geom_histogram.html 
+```{r}
+plot <- iris %>% 
+  ggplot(aes(Sepal.Width)) +
+  geom_histogram(bins = 30)
+
+plot
+```
