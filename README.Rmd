@@ -205,9 +205,10 @@ Example:
  - Other delimited files are fine too 
  - excel workbook files can import but will complicate things
 
- Syntax:
+Syntax:
      
-      data <- read_csv("fileName.csv")
+      oz_mar <- read_csv("march_ozone.csv")
+Now we have a dataframe stored in the object oz_mar.
 
   - Paths to these files is necessary if you are not already pointed to your working directory (more on this later!) 
   - Many other arguments are available to specify things like whether there is a header, or if the delimiter is something other than a comma
@@ -215,3 +216,79 @@ Example:
      - http://rprogramming.net/read-csv-in-r/	
 
 
+
+---
+
+
+
+
+## Calling columns in a dataframe with $
+
+Example: 
+
+    oz_mar$value
+    
+This would pick out the column titled "value" within the oz_mar dataframe.
+
+
+
+
+---
+
+## Storing variables, temporary objects
+  
+  
+  
+  
+  
+  
+  
+  
+  
+---
+  
+  
+
+## Data types
+
+
+
+
+---
+
+
+
+## Data structures
+
+
+
+
+---
+
+
+
+## Missing values - NA
+
+
+
+
+
+---
+
+
+
+## Logical operators
+
+
+
+
+
+
+---
+
+## Best practices
+- R Projects vs. working directories
+- Debugging
+
+
+---
