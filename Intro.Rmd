@@ -1,0 +1,105 @@
+---
+title: "R for Air Quality - Introduction"
+date: "April 7, 2020"
+author: "Jenny St. Clair, Environmental Data Specialist, MARAMA"
+output: github_document
+---
+
+```{r, include = FALSE}
+#dependencies
+library(png)
+library(tidyverse)
+library(knitr)
+library(lubridate)
+```
+
+
+```{r,out.width = "30%", echo=FALSE}
+include_graphics("marama_logo.png")
+```
+
+
+---
+
+## Q & A
+
+- Please submit questions in the question box.
+- We will answer as many questions as possible during this webinar. If we can't get to your question, we will respond via email. 
+
+```{r,out.width = "30%", echo=FALSE}
+# placeholder - need to get attendee image
+#include_graphics("gotoweb_qbox.png")
+```
+
+
+---
+
+## Overview
+
+- About R
+- The bad vs. the good
+- Scripts (.R) and RMarkdown files (.Rmd)
+- Packages
+- Coding in R
+    - Functions
+    - Object names
+    - Importing data
+    - Calling columns in a dataframe with $
+    - Storing variables, temporary objects
+    - Data types
+    - Data structures
+    - Missing values - NA
+    - Logical operators
+- Best practices
+    - R Projects vs. working directories
+    - Debugging
+
+Garrett Grolemund and Hadley Wickham's book, "R for Data Science" was instrumental in developing this webinar series.
+https://r4ds.had.co.nz/
+
+---
+
+## About R
+
+- Statistical programming language
+- High-level
+- Versatile, robust
+- Packages
+- Useful for both data preparation and data analysis
+- Open source
+    - Meaning: source code is freely available to the public, the public can contribute
+- Free
+
+---
+
+## The bad
+ - R has a steep learning curve
+ - If colleagues don't know R, this can hinder collaboration
+
+## The good
+ - R can handle larger files
+ - Excel is a spreadsheet tool, errors hide
+ - Reproducability, transparency
+ - Advanced and versatile statistics
+ - Customizable data visualizations
+ 
+## The different (but neutral)
+ - R has less formal support, but virtually endless online user community forums
+ 
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
