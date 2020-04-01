@@ -19,7 +19,13 @@ include_graphics("marama_logo.png")
 ```
 
 
+
+
+
 ---
+
+
+
 
 ## Q & A
 
@@ -32,7 +38,12 @@ include_graphics("marama_logo.png")
 ```
 
 
+
+
 ---
+
+
+
 
 ## Overview
 
@@ -57,7 +68,13 @@ include_graphics("marama_logo.png")
 Garrett Grolemund and Hadley Wickham's book, "R for Data Science" was instrumental in developing this webinar series.
 https://r4ds.had.co.nz/
 
+
+
+
 ---
+
+
+
 
 ## About R
 
@@ -86,9 +103,54 @@ https://r4ds.had.co.nz/
 ## The different (but neutral)
  - R has less formal support, but virtually endless online user community forums
  
+ 
+ 
+ 
 ---
 
 
+
+
+## Scripts (.R) and RMarkdown files (.Rmd)
+ - 
+ 
+ 
+ 
+ 
+---
+
+
+
+
+## Packages/Libraries
+
+ - Contain numerous functions that help you complete specialized tasks
+ - Anyone can make one
+ - The reason R is so versatile and robust
+ - Tidyverse
+ - Openair
+ - Many, many more
+
+
+##### Installation:
+```{r, eval=FALSE}
+
+# not run
+install.packages("tidyverse")
+
+```
+
+
+
+##### Call a package or library: 
+```{r}
+library(tidyverse)
+```
+
+
+
+
+---
 
 
 
