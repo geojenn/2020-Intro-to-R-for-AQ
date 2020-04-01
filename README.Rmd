@@ -1,4 +1,6 @@
-
+---
+output: github_document
+---
 
 # R for Air Quality - Introduction <img src="marama_logo.png" align="right" height="70" />
 
