@@ -2,20 +2,6 @@
 
 # R for Air Quality - Introduction <img src="marama_logo.png" align="right" height="70" />
 
-```{r, include = FALSE}
-#dependencies
-library(png)
-library(tidyverse)
-library(knitr)
-library(lubridate)
-```
-
-
-```{r,out.width = "30%", echo=FALSE}
-include_graphics("marama_logo.png")
-```
-
-
 
 
 
@@ -24,20 +10,16 @@ include_graphics("marama_logo.png")
 
 
 
-## Q & A
+## Q & A 
 
 - Please submit questions in the question box.
 - We will answer as many questions as possible during this webinar. If we can't get to your question, we will respond via email. 
 
-```{r,out.width = "30%", echo=FALSE}
-# placeholder - need to get attendee image
-#include_graphics("gotoweb_qbox.png")
-```
-
 
 
 
 ---
+
 
 
 
@@ -68,7 +50,9 @@ https://r4ds.had.co.nz/
 
 
 
+
 ---
+
 
 
 
@@ -84,7 +68,13 @@ https://r4ds.had.co.nz/
     - Meaning: source code is freely available to the public, the public can contribute
 - Free
 
+
+
+
 ---
+
+
+
 
 ## The bad
  - R has a steep learning curve
@@ -150,6 +140,8 @@ library(tidyverse)
 ---
 
 
+
+
 ## Coding in R
 
   - Functions
@@ -163,7 +155,11 @@ library(tidyverse)
   - Logical operators
 
 
+
+
 ---
+
+
 
 
 ## Functions
@@ -171,7 +167,7 @@ library(tidyverse)
 R has many functions built in. These are referred to as Base R functions.
 When you call a function, it looks like this:
 
-    function_name( arg1 = val1, arg2 = val2)
+    function_name( arg1 = val1, arg2 = val2 )
 
 You can create a function, but that's beyond the scope of our training.
 You will see many examples of functions as we move forward.
@@ -179,7 +175,43 @@ You will see many examples of functions as we move forward.
 
 
 
+---
 
 
+
+
+## Object Names
+
+ - Must start with a letter
+ - Can contain _ and .
+ - Descriptive
+ - Some people use snake_case, others prefer camelCase.
+ - Best practice: be consistent with naming conventions.
+
+Example:
+
+    my_text <- "Hello World"
+
+
+
+
+---
+
+
+
+## Importing data
+
+ - CSV's are the best file format
+ - Other delimited files are fine too 
+ - excel workbook files can import but will complicate things
+
+ Syntax:
+     
+      data <- read_csv("fileName.csv")
+
+  - Paths to these files is necessary if you are not already pointed to your working directory (more on this later!) 
+  - Many other arguments are available to specify things like whether there is a header, or if the delimiter is something other than a comma
+     - https://readr.tidyverse.org/reference/read_delim.html 
+     - http://rprogramming.net/read-csv-in-r/	
 
 

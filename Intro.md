@@ -3,6 +3,9 @@ R for Air Quality - Introduction
 Jenny St. Clair, Environmental Data Specialist, MARAMA
 April 7, 2020
 
+R for Air Quality - Introduction <img src="marama_logo.png" align="right" height="139" />
+=========================================================================================
+
 <img src="marama_logo.png" width="30%" />
 
 ------------------------------------------------------------------------
@@ -105,3 +108,29 @@ install.packages("tidyverse")
 ``` r
 library(tidyverse)
 ```
+
+------------------------------------------------------------------------
+
+Coding in R
+-----------
+
+-   Functions
+-   Object names
+-   Importing data
+-   Calling columns in a dataframe with $
+-   Storing variables, temporary objects
+-   Data types
+-   Data structures
+-   Missing values - NA
+-   Logical operators
+
+------------------------------------------------------------------------
+
+Functions
+---------
+
+R has many functions built in. These are referred to as Base R functions. When you call a function, it looks like this:
+
+    function_name( arg1 = val1, arg2 = val2)
+
+You can create a function, but that's beyond the scope of our training. You will see many examples of functions as we move forward.
