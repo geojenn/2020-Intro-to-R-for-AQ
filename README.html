@@ -299,17 +299,14 @@ install.packages(&quot;tidyverse&quot;)</code></pre>
 </div>
 <div id="coding-in-r" class="section level2">
 <h2>Coding in R</h2>
-<ul>
-<li>Functions</li>
-<li>Object names</li>
-<li>Importing data</li>
-<li>Calling columns in a dataframe with $</li>
-<li>Storing variables, temporary objects</li>
-<li>Data types</li>
-<li>Data structures</li>
-<li>Missing values - NA</li>
-<li>Logical operators</li>
-</ul>
+<p>You can use R as a calculator</p>
+<pre><code>400 * 3 + 55.889
+2 ^ 8</code></pre>
+<p>You can create new objects with &lt;- (which reads “gets”)</p>
+<pre><code>objectName &lt;- value
+someText &lt;- &quot;Hello World&quot;
+print(someText)</code></pre>
+<p>Tips: - Give objects short and meaningful names. - You can see objects you’ve created in the upper righthand side of your RStudio window-or the Environment - You can make a line into a comment by typing # in front. This is how you can add plain text or non-executable code. - Tip: press alt + shift + k and see what happens</p>
 <hr />
 </div>
 <div id="functions" class="section level2">
@@ -340,7 +337,8 @@ install.packages(&quot;tidyverse&quot;)</code></pre>
 <li>excel workbook files can import but will complicate things</li>
 </ul>
 <p>Syntax:</p>
-<pre><code>  data &lt;- read_csv(&quot;fileName.csv&quot;)</code></pre>
+<pre><code>  oz_mar &lt;- read_csv(&quot;march_ozone.csv&quot;)</code></pre>
+<p>Now we have a dataframe stored in the object oz_mar.</p>
 <ul>
 <li>Paths to these files is necessary if you are not already pointed to your working directory (more on this later!)</li>
 <li>Many other arguments are available to specify things like whether there is a header, or if the delimiter is something other than a comma
@@ -349,6 +347,69 @@ install.packages(&quot;tidyverse&quot;)</code></pre>
 <li><a href="http://rprogramming.net/read-csv-in-r/" class="uri">http://rprogramming.net/read-csv-in-r/</a></li>
 </ul></li>
 </ul>
+<hr />
+</div>
+<div id="calling-columns-in-a-dataframe-with" class="section level2">
+<h2>Calling columns in a dataframe with $</h2>
+<p>Example:</p>
+<pre><code>oz_mar$value</code></pre>
+<p>This would pick out the column titled “value” within the oz_mar dataframe.</p>
+<hr />
+</div>
+<div id="storing-variables-temporary-objects" class="section level2">
+<h2>Storing variables, temporary objects</h2>
+<p>When you run functions in R, you have two options for handling the output: 1. Allow it to print to the console (it’s not saved and you can’t use it later)</p>
+<pre><code>oz_mar$value * 0.9</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Store it in an object using &lt;- “gets”</p>
+<p>oz_control &lt;- oz_mar$value * 0.9</p></li>
+</ol>
+<hr />
+</div>
+<div id="data-types" class="section level2">
+<h2>Data types</h2>
+<ul>
+<li>Character “Hello World”</li>
+<li>Numeric (real or decimal) 3.14159</li>
+<li>Integer 7</li>
+<li>Logical TRUE</li>
+</ul>
+<hr />
+</div>
+<div id="data-structures" class="section level2">
+<h2>Data structures</h2>
+<p>Atomic vector: the most basic data structure</p>
+<pre><code>c(1, 4, 6, 2, 3)
+c(&quot;hello&quot;, &quot;world&quot;, &quot;its&quot;, &quot;me&quot;, &quot;jenny&quot;)</code></pre>
+<p>List: similar to a vector, but it can store different data types</p>
+<pre><code>list(1, &quot;hello&quot;, TRUE, 3.141)</code></pre>
+<p>Matrix: the simplest 2-dimensional data structure</p>
+<pre><code>matrix(month.abb, nrow = 3, ncol = 4)</code></pre>
+<p>Data frame: similar to matrices, tightly couples collections of variables</p>
+<p>Factors: a vector with ordered levels, xtremely helpful with categorical data</p>
+<hr />
+</div>
+<div id="missing-values---na" class="section level2">
+<h2>Missing values - NA</h2>
+<ul>
+<li>R knows what a missing value is (when it’s represented with NA)</li>
+<li>For automatic recognition of missing values, use NA</li>
+<li>Sometimes NA will be the output when an operation doesn’t make sense</li>
+</ul>
+<hr />
+</div>
+<div id="logical-operators" class="section level2">
+<h2>Logical operators</h2>
+<p>You will need to use logical operators when sub-setting data and in if-statements when your scripts get more complex (we will not cover if-statements in this training) - “not” = ! - “and” for vectors &gt; length-1 = &amp; - “and” for single, scalar objects = &amp;&amp; - “or” for vectors &gt; length-1 = | - “or” for single, scalar objects = || - exclusive “or” = xor(x, y) - isNA() checks if an object is NA and returns TRUE or FALSE</p>
+<hr />
+</div>
+<div id="best-practices" class="section level2">
+<h2>Best practices</h2>
+<ul>
+<li>R Projects vs. working directories</li>
+<li>Debugging</li>
+</ul>
+<hr />
 </div>
 </div>
 
