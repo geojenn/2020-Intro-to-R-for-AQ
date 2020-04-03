@@ -151,7 +151,7 @@ You can use R as a calculator
     400 * 3 + 55.889
     2 ^ 8
     
-You can create new objects with <- (which reads "gets")
+You can create new objects with <- (which reads "gets") 
     
     objectName <- value
     someText <- "Hello World"
@@ -319,6 +319,7 @@ Factors: a vector with ordered levels, xtremely helpful with categorical data
 ## Logical operators
 
 You will need to use logical operators when sub-setting data and in if-statements when your scripts get more complex (we will not cover if-statements in this training)
+
  - "not" = !
  - "and" for vectors > length-1 = &
  - "and" for single, scalar objects = &&
