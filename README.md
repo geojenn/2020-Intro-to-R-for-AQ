@@ -17,9 +17,9 @@ Overview
 
 -   About R
 -   The bad vs. the good
--   Scripts (.R) and RMarkdown files (.Rmd)
--   Packages
+
 -   Coding in R
+    -   Scripts (.R) 
     -   Functions
     -   Object names
     -   Importing data
@@ -29,7 +29,9 @@ Overview
     -   Data structures
     -   Missing values - NA
     -   Logical operators
+    -   Packages
 -   Best practices
+    -   RMarkdown files (.Rmd)
     -   R Projects vs. working directories
     -   Debugging
 
