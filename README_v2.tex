@@ -1,0 +1,550 @@
+\documentclass[ignorenonframetext,]{beamer}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\newif\ifbibliography
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+
+\AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \let\insertsectionnumber\relax
+    \let\sectionname\relax
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+\date{}
+
+\begin{document}
+
+\begin{frame}{R for Air Quality - Introduction}
+
+\end{frame}
+
+\begin{frame}{Q \& A }
+
+\begin{itemize}
+\tightlist
+\item
+  Please submit questions in the question box on the GoToWebinar Side
+  Panel.
+\item
+  We will answer as many questions as possible during this webinar. If
+  we can't get to your question during the webinar, we'll respond via
+  email.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Overview}
+
+\begin{itemize}
+\tightlist
+\item
+  About R
+\item
+  The bad vs.~the good
+\item
+  Coding in R
+
+  \begin{itemize}
+  \tightlist
+  \item
+    RStudio
+  \item
+    Scripts.R
+  \item
+    Functions
+  \item
+    Object names
+  \item
+    Importing data
+  \item
+    Calling columns in a dataframe with \$
+  \item
+    Storing variables, temporary objects
+  \item
+    Data types
+  \item
+    Data structures
+  \item
+    Missing values - NA
+  \item
+    Logical operators
+  \item
+    Packages
+  \end{itemize}
+\item
+  Best practices
+
+  \begin{itemize}
+  \tightlist
+  \item
+    RMarkdown.Rmd
+  \item
+    R Projects vs.~working directories
+  \item
+    Debugging - 5 Steps (Jenny Bryan's talk)
+  \end{itemize}
+\end{itemize}
+
+Garrett Grolemund and Hadley Wickham's book, ``R for Data Science'' was
+instrumental in developing this webinar series.
+\url{https://r4ds.had.co.nz/}
+
+\end{frame}
+
+\begin{frame}{About R}
+
+\begin{itemize}
+\tightlist
+\item
+  Statistical programming language
+\item
+  High-level
+\item
+  Versatile, robust
+\item
+  Packages
+\item
+  Useful for both data preparation and data analysis
+\item
+  Open source
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Meaning: source code is freely available to the public, the public
+    can contribute
+  \end{itemize}
+\item
+  Free
+\end{itemize}
+
+\begin{block}{The bad}
+
+\begin{itemize}
+\tightlist
+\item
+  R has a steep learning curve
+\item
+  If colleagues don't know R, this can hinder collaboration
+\end{itemize}
+
+\end{block}
+
+\begin{block}{The good}
+
+\begin{itemize}
+\tightlist
+\item
+  R can handle larger files
+\item
+  Excel is a spreadsheet tool, errors hide
+\item
+  Reproducability, transparency
+\item
+  Advanced and versatile statistics
+\item
+  Customizable data visualizations
+\end{itemize}
+
+\end{block}
+
+\begin{block}{The different (but neutral)}
+
+\begin{itemize}
+\tightlist
+\item
+  R has less formal support, but virtually endless online user community
+  forums
+\end{itemize}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{RStudio}
+
+\begin{itemize}
+\tightlist
+\item
+  The most popular Integrated Development Environment (IDE) for R
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Scripts.R}
+
+\end{frame}
+
+\begin{frame}{Scripts.R}
+
+\end{frame}
+
+\begin{frame}[fragile]{Packages/Libraries}
+
+\begin{itemize}
+\tightlist
+\item
+  Contain numerous functions that help you complete specialized tasks
+\item
+  Anyone can make one
+\item
+  The reason R is so versatile and robust
+\item
+  Tidyverse
+\item
+  Openair
+\item
+  Many, many more
+\end{itemize}
+
+\begin{block}{Installation:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# not run}
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\begin{block}{Call a package or library:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'tidyverse' was built under R version 3.6.3
+
+## -- Attaching packages --------------------------------------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
+
+## v ggplot2 3.3.0     v purrr   0.3.3
+## v tibble  2.1.3     v dplyr   0.8.3
+## v tidyr   1.0.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.4.0
+
+## Warning: package 'ggplot2' was built under R version 3.6.3
+
+## -- Conflicts ------------------------------------------------------------------------------------------------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{You can use R as a calculator}
+
+\begin{verbatim}
+400 * 3 + 55.889
+2 ^ 8
+\end{verbatim}
+
+You can create new objects with \textless{}- (which reads ``gets'')
+
+\begin{verbatim}
+objectName <- value
+someText <- "Hello World"
+print(someText)
+\end{verbatim}
+
+Tips: - Give objects short and meaningful names. - You can see objects
+you've created in the upper righthand side of your RStudio window-or the
+Environment - You can make a line into a comment by typing \# in front.
+This is how you can add plain text or non-executable code. - Tip: press
+alt + shift + k and see what happens
+
+\end{frame}
+
+\begin{frame}[fragile]{Functions}
+
+R has many functions built in. These are referred to as Base R
+functions. When you call a function, it looks like this:
+
+\begin{verbatim}
+function_name( arg1 = val1, arg2 = val2 )
+\end{verbatim}
+
+You can create a function, but that's beyond the scope of our training.
+You will see many examples of functions as we move forward.
+
+\end{frame}
+
+\begin{frame}[fragile]{Object Names}
+
+\begin{itemize}
+\tightlist
+\item
+  Must start with a letter
+\item
+  Can contain \_ and .
+\item
+  Descriptive
+\item
+  Some people use snake\_case, others prefer camelCase.
+\item
+  Best practice: be consistent with naming conventions.
+\end{itemize}
+
+Example:
+
+\begin{verbatim}
+my_text <- "Hello World"
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Importing data}
+
+\begin{itemize}
+\tightlist
+\item
+  CSV's are the best file format
+\item
+  Other delimited files are fine too
+\item
+  excel workbook files can import but will complicate things
+\end{itemize}
+
+Syntax:
+
+\begin{verbatim}
+  oz_mar <- read_csv("march_ozone.csv")
+\end{verbatim}
+
+Now we have a dataframe stored in the object oz\_mar.
+
+\begin{itemize}
+\tightlist
+\item
+  Paths to these files is necessary if you are not already pointed to
+  your working directory (more on this later!)
+\item
+  Many other arguments are available to specify things like whether
+  there is a header, or if the delimiter is something other than a comma
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://readr.tidyverse.org/reference/read_delim.html}
+  \item
+    \url{http://rprogramming.net/read-csv-in-r/}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Calling columns in a dataframe with \$}
+
+Example:
+
+\begin{verbatim}
+oz_mar$value
+\end{verbatim}
+
+This would pick out the column titled ``value'' within the oz\_mar
+dataframe.
+
+\end{frame}
+
+\begin{frame}[fragile]{Storing variables, temporary objects}
+
+When you run functions in R, you have two options for handling the
+output: 1. Allow it to print to the console (it's not saved and you
+can't use it later)
+
+\begin{verbatim}
+oz_mar$value * 0.9
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Store it in an object using \textless{}- ``gets''
+
+  oz\_control \textless{}- oz\_mar\$value * 0.9
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Data types}
+
+\begin{itemize}
+\tightlist
+\item
+  Character ``Hello World''
+\item
+  Numeric (real or decimal) 3.14159
+\item
+  Integer 7
+\item
+  Logical TRUE
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Data structures}
+
+Atomic vector: the most basic data structure
+
+\begin{verbatim}
+c(1, 4, 6, 2, 3)
+c("hello", "world", "its", "me", "jenny")
+\end{verbatim}
+
+List: similar to a vector, but it can store different data types
+
+\begin{verbatim}
+list(1, "hello", TRUE, 3.141)
+\end{verbatim}
+
+Matrix: the simplest 2-dimensional data structure
+
+\begin{verbatim}
+matrix(month.abb, nrow = 3, ncol = 4)
+\end{verbatim}
+
+Data frame: similar to matrices, tightly couples collections of
+variables
+
+Factors: a vector with ordered levels, xtremely helpful with categorical
+data
+
+\end{frame}
+
+\begin{frame}{Missing values - NA}
+
+\begin{itemize}
+\tightlist
+\item
+  R knows what a missing value is (when it's represented with NA)
+\item
+  For automatic recognition of missing values, use NA
+\item
+  Sometimes NA will be the output when an operation doesn't make sense
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Logical operators}
+
+You will need to use logical operators when sub-setting data and in
+if-statements when your scripts get more complex (we will not cover
+if-statements in this training) - ``not'' = ! - ``and'' for vectors
+\textgreater{} length-1 = \& - ``and'' for single, scalar objects = \&\&
+- ``or'' for vectors \textgreater{} length-1 = \textbar{} - ``or'' for
+single, scalar objects = \textbar{}\textbar{} - exclusive ``or'' =
+xor(x, y) - isNA() checks if an object is NA and returns TRUE or FALSE
+
+\end{frame}
+
+\begin{frame}{Best practices}
+
+\begin{itemize}
+\tightlist
+\item
+  RMarkdown files (.Rmd)
+\item
+  R Projects vs.~working directories
+\item
+  Debugging
+\end{itemize}
+
+\end{frame}
+
+\end{document}
