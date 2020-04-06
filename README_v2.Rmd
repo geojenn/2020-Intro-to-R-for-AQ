@@ -143,41 +143,40 @@ An Integrated Development Environment (IDE) for R
 
 
 
+
+
 # Scripts.R 
-<img src="RStudioWindow_script.png" align="left" height="800" />
+<img src="RStudioWindow_script.png" align="left" height="750" />
+
+
+ You can make a line into a comment by typing \# in front. This is how you can add plain text or non-executable code.
 
 
 
 
-
-
-
-# You can use R as a calculator
+# Use R as a calculator
 
     400 * 3 + 55.889
+    
     2 ^ 8
 
-You can create new objects with &lt;- (which reads "gets")
+ - You can enter these into the console and get a result, but what if you want to store the result?
 
+# Objects
+
+ - An "object" is something that contains information.
+ - You can create new objects with &lt;- (which reads "gets")
+
+Example
+    
     objectName <- value
+    
     someText <- "Hello World"
+    
     print(someText)
 
-Tips: - Give objects short and meaningful names. - You can see objects you've created in the upper righthand side of your RStudio window-or the Environment - You can make a line into a comment by typing \# in front. This is how you can add plain text or non-executable code. - Tip: press alt + shift + k and see what happens
-
-
-
-
-
-
-
-# Functions
-
-R has many functions built in. These are referred to as Base R functions. When you call a function, it looks like this:
-
-    function_name( arg1 = val1, arg2 = val2 )
-
-You can create a function, but that's beyond the scope of our training. You will see many examples of functions as we move forward.
+ - Give objects short and meaningful names.
+ - You can see objects you've created in the upper righthand side of RStudio--the Environment window
 
 
 
@@ -196,6 +195,21 @@ You can create a function, but that's beyond the scope of our training. You will
 Example:
 
     my_text <- "Hello World"
+
+
+
+
+
+
+
+# Functions
+
+R has many functions built in. These are referred to as Base R functions. When you call a function, it looks like this:
+
+    function_name( arg1 = val1, arg2 = val2 )
+
+You can create a function, but that's beyond the scope of our training. You will see many examples of functions as we move forward.
+
 
 
 
@@ -238,21 +252,6 @@ This would pick out the column titled "value" within the oz\_mar dataframe.
 
 
 
-# Storing variables, temporary objects
-
-When you run functions in R, you have two options for handling the output: 1. Allow it to print to the console (it's not saved and you can't use it later)
-
-    oz_mar$value * 0.9
-
-1.  Store it in an object using &lt;- "gets"
-
-    oz\_control &lt;- oz\_mar$value \* 0.9
-
-
-
-
-
-
 
 # Data types
 
@@ -279,11 +278,12 @@ List: similar to a vector, but it can store different data types
 
 Matrix: the simplest 2-dimensional data structure
 
-    matrix(month.abb, nrow = 3, ncol = 4)
+    matrix(c("a", "b", "c"), nrow = 3, ncol = 4)
 
-Data frame: similar to matrices, tightly couples collections of variables
+Data frame: similar to matrices, tightly coupled collections of variables
 
-Factors: a vector with ordered levels, xtremely helpful with categorical data
+Factors: a vector with ordered levels, helpful with categorical data
+
 
 
 
@@ -301,11 +301,13 @@ Factors: a vector with ordered levels, xtremely helpful with categorical data
 
 
 
+
 # Logical operators
 
 You will need to use logical operators when sub-setting data and in if-statements when your scripts get more complex (we will not cover if-statements in this training)
 
-- "not" = ! - "and" for vectors &gt; length-1 = &
+- "not" = !
+- "and" for vectors &gt; length-1 = &
 - "and" for single, scalar objects = &&
 - "or" for vectors &gt; length-1 = |
 - "or" for single, scalar objects = ||
