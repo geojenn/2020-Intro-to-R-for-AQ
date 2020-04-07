@@ -380,18 +380,60 @@ library(tidyverse)
  - Many people set a "working directory" for every project using setwd()
  - This is problematic. 
  - File organization is different on different computers.
- - When a pandemic leads to mass teleworking, suddenly you need access to all your projects at home.
+ - If there were ever a pandemic that lead to mass teleworking, suddenly you'd need to change all your working directories to match your home computer by hand.
+ - The solution: a Project-Oriented Workflow!
 
-
-
-# Projects <img src="Projects.png" align="left" height="650" />
-
-
-
+ - For more on this: https://rstats.wtf/index.html
 
 
 
 
+# R Projects <img src="Projects.png" align="left" height="650" />
 
-# Best practices: Debugging
+
+
+
+
+
+
+
+
+# Best practices: Problem-solving in R
+
+A quick summary of Jenny Bryan's RStudio::conf 2020 talk, "object of type closure is not subsettable" (which you should definitely watch!)
+See: https://github.com/jennybc/debugging 
+
+# 1. Reset <img src="Roy.png" align="right" height="150" />
+  - Restart R
+  - Set your global options in RStudio to NEVER save .RData on exit 
+  - https://rstats.wtf/index.html
+  
+# 2. Reprex, AKA minimum reproducible example
+  - Stripping away all the "extra" stuff to isolate/recreate the bug
+  - No extra packages, no unecessary functions, inputs are small and simple
+  - Can be tricky
+
+# 3. Debug
+  - R has a built in debugger. This may come in handy later on down the line. 
+  - Jenny Bryan's talk includes more detail on how to approach this.
+  
+# 4. Deter
+  - Prevent a problem by adding built-in checks that can tell you what's wrong.
+  
+  
+  
+  
+  
+# Where to get help?
+ 1. Check the R Documentation to be sure you're doing things by the book: https://www.rdocumentation.org/
+ 2. See if a there is a forum that answers your question already.
+    - https://stackoverflow.com/questions/tagged/r
+    - https://community.rstudio.com/
+ 3. If you can't find the answer online and want to ask the internet for help:
+    - Create a reprex that someone else could run (keep it simple!! use fake or built-in data)
+    - The friendliest place for beginners: https://community.rstudio.com/
+    - Stackoverflow can be unfriendly if you don't have a reprex or if your question has been answered already in another post--you've been warned :)
+    
+# Exercises
+
 
