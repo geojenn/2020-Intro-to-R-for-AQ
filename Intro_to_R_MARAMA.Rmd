@@ -13,7 +13,7 @@ output:
 
 
 
-# R for Air Quality - Introduction <img src="marama_logo.png" align="right" height="125" /> 
+# R for Air Quality - Introduction <img src="Images/marama_logo.png" align="right" height="100" /> 
 
  - Webinar 1: A General Introduction to R - Today
     - Jenny St. Clair, Environmental Data Specialist, MARAMA
@@ -33,7 +33,7 @@ output:
 
 # Q & A 
 
-<img src="gotoweb_qbox.png" align="right" height="300" />
+<img src="Images/gotoweb_qbox.png" align="right" height="300" />
 
 
 -   Please submit questions in the question box on the GoToWebinar Side Panel.
@@ -130,7 +130,7 @@ Garrett Grolemund and Hadley Wickham's book, "R for Data Science" was instrument
 
 # RStudio 
 An Integrated Development Environment (IDE) for R
-<img src="RStudioWindow.png" align="left" height="600" />
+<img src="Images/RStudioWindow.png" align="left" height="600" />
 
 
 
@@ -138,7 +138,7 @@ An Integrated Development Environment (IDE) for R
 
 
 # Scripts.R 
-<img src="NewRScript.png" align="left" height="450" />
+<img src="Images/NewRScript.png" align="left" height="450" />
 
 
 
@@ -149,7 +149,7 @@ An Integrated Development Environment (IDE) for R
 
 
 # Scripts.R 
-<img src="RStudioWindow_script.png" align="left" height="500" />
+<img src="Images/RStudioWindow_script.png" align="left" height="500" />
 
 
  You can make a line into a comment by typing \# in front. This is how you can add plain text or non-executable code.
@@ -363,13 +363,13 @@ library(tidyverse)
 
 # Best practices: RMarkdown files (.Rmd)
 
-<img src="RStudioWindow_Rmd.png" align="left" height="750" />
+<img src="Images/RStudioWindow_Rmd.png" align="left" height="750" />
 
-<img src="RStudioWindow_Rmd_1.png" align="left" height="750" />
+<img src="Images/RStudioWindow_Rmd_1.png" align="left" height="750" />
 
-<img src="RStudioWindow_Rmd_2.png" align="left" height="650" />
+<img src="Images/RStudioWindow_Rmd_2.png" align="left" height="650" />
 
-<img src="RStudioWindow_Rmd_3.png" align="left" height="650" />
+<img src="Images/RStudioWindow_Rmd_3.png" align="left" height="650" />
 
 
 
@@ -391,7 +391,7 @@ library(tidyverse)
 
 
 
-# R Projects <img src="Projects.png" align="left" height="650" />
+# R Projects <img src="Images/Projects.png" align="left" height="650" />
 
 
 
@@ -406,7 +406,7 @@ library(tidyverse)
 A quick summary of Jenny Bryan's RStudio::conf 2020 talk, "object of type closure is not subsettable" (which you should definitely watch!)
 See: https://github.com/jennybc/debugging 
 
-# 1. Reset <img src="Roy.png" align="right" height="150" />
+# 1. Reset <img src="Images/Roy.png" align="right" height="150" />
   - Restart R
   - Set your global options in RStudio to NEVER save .RData on exit 
   - https://rstats.wtf/index.html
@@ -444,7 +444,7 @@ See: https://github.com/jennybc/debugging
 
 # Questions?
 
-<img src="Questions.png" align="left" height="500" />
+<img src="Images/Questions.png" align="left" height="500" />
     
     
     
@@ -459,7 +459,7 @@ See: https://github.com/jennybc/debugging
     - Click on "Knit."
     - Delete all pre-populated text in the file except the YAML header at the top.
     - create an R chunk by typing the following:
-  <img src="RChunk.png" align="right" height="50" />
+  <img src="Images/RChunk.png" align="right" height="50" />
     - Load tidyverse.
     - Save a csv in your project folder (preferrably something with a standard format - single line header)
     - Read the csv into R.
@@ -472,3 +472,9 @@ See: https://github.com/jennybc/debugging
 # Thank you!
 
 We will send out a link to the recording of this webinar, so stay tuned!
+
+Please feel free to email with any questions.
+
+ - Website: www.marama.org 
+ - Email: jstclair@marama.org
+ - GitHub: @geojenn
