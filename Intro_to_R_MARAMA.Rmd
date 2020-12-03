@@ -315,7 +315,7 @@ You will need to use logical operators when sub-setting data and in if-statement
 - "or" for vectors &gt; length-1 = |
 - "or" for single, scalar objects = ||
 - exclusive "or" = xor(x, y)
-- isNA() checks if an object is NA and returns TRUE or FALSE
+- is.NA() checks if an object is NA and returns TRUE or FALSE
 
 
 
